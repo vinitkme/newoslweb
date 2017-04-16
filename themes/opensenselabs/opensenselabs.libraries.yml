@@ -1,0 +1,9 @@
+global:
+  version: VERSION
+  css:
+    base:
+      css/opensenselabs.css: {}
+      css/style.css: {}
+      css/app.css: {}
+  js:
+    js/STARTER.js: {}

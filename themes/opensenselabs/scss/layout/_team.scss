@@ -1,0 +1,55 @@
+.team {
+ .team_member {
+   img {
+     max-width: 130px;
+   }
+ }
+}
+.team_member {
+ img {
+   max-width: 220px;
+ }
+ h4{
+   margin-top: 0.583em;
+   span{
+     font-weight: 300;
+   }
+ }
+ p {
+   margin-top: -0.250em;
+   margin-bottom: 0.833em;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 300;
+   font-size: 0.833rem;
+   text-transform: uppercase;
+ }
+
+.drupal {
+   background-image: url(../images/drupalcon.png);
+   height: 52px;
+   width: 52px;
+   text-indent: -9999em;
+}
+.linkedin {
+ background-image: url(../images/incon.png);
+ height: 52px;
+ width: 52px;
+ text-indent: -9999em;
+}
+}
+
+.team {
+  .button {
+    @media only screen and (max-width: 40em) {
+    margin-bottom: 30px; }
+  }
+.team_member {
+ margin-bottom: 120px;
+}
+.connect {
+ img {
+   margin-top: -10px;
+   margin-bottom: 8px;
+ }
+}
+}

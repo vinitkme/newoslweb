@@ -1,0 +1,224 @@
+From 69ede8d1f12e0de20cb8e17dc85396e22b087aef Mon Sep 17 00:00:00 2001
+From: mariagwyn <mariagwyn@gmail.com>
+Date: Thu, 23 Feb 2017 12:45:57 -0800
+Subject: [PATCH 1/2] Issue 2854737: update gulp drush to allow drush alias
+ variables; default enable is now 'false.'
+
+---
+ STARTER/README.txt | 17 +++++++++++++----
+ STARTER/config.js  | 15 ++++++++++-----
+ 2 files changed, 23 insertions(+), 9 deletions(-)
+
+diff --git a/STARTER/README.txt b/STARTER/README.txt
+index 4c9fb0e..6ace57c 100644
+--- a/STARTER/README.txt
++++ b/STARTER/README.txt
+@@ -15,12 +15,14 @@ template.php THEMENAME_preprocess_html function.
+ 
+ *** IMPORTANT NOTE ***
+ * After adding a new theme in Drupal 8, you'll need to clear the theme registry's
+-* cache, which you can do by clearing all cache in the UI or running `drush cr` ,
+-* if you have Drush installed.
++cache, which you can do by clearing all cache in the UI or running `drush cr` ,
++if you have Drush installed.
+ 
+-Automatic drush sub-theme setup
++Using Drush
+ -------------------------------
+ 
++**Automatic drush sub-theme setup**
++
+ To create a sub-theme, simply run the Drush command `drush fst sub_theme`, where
+ "sub_theme" is the desired machine name of your sub-theme. Once a sub-theme is
+ created, you can enable it at /admin/appearance .
+@@ -28,6 +30,13 @@ created, you can enable it at /admin/appearance .
+ Then follow step 6 below to generate the necessary Foundation files that are not
+ included in the repository by default.
+ 
++**Drush and Gulp**
++
++The `gulpfile.js` includes drush commands that can be run every time scss/css is updated. To use drush, edit the `config.js` file. In the `drush` option:
++1. Set `enabled: false` to `enabled: true`
++1. (Optional) Set the `drush_alias` variable.
++
++
+ Manual sub-theme setup
+ ----------------------
+ 
+@@ -92,7 +101,7 @@ Manual sub-theme setup
+     - `npm install`
+     - `bower install`
+ 
+-    Finally, run `npm start` to run the Sass compiler. or 'npm run watch' which
++    Finally, run `gulp` to run the Sass compiler, or 'gulp watch' which
+     will re-run every time you save a Sass file. Press Ctrl-C to break out of
+     watching files.
+ 
+diff --git a/STARTER/config.js b/STARTER/config.js
+index 93d594c..c9366d4 100644
+--- a/STARTER/config.js
++++ b/STARTER/config.js
+@@ -1,11 +1,16 @@
++// Override gulp options here rather than in gulpfile.js.
++
++// Set a drush alias if required to run locally, i.e.:
++// '@multisite.local --uri=multisitename'
++var drush_alias = '';
++
+ module.exports = {
+-  // Override options object in gulpfile.js, try not to override gulpfile.js if
+-  // not not necessary.
++  // set 'enabled: true' to run drush commands as a part of 'gulp watch'.
+   drush: {
+-    enabled: true,
++    enabled: false,
+     alias: {
+-      css_js: 'drush cc css-js',
+-      cr: 'drush cr'
++      css_js: 'drush ' + drush_alias + ' cc css-js',
++      cr: 'drush ' + drush_alias + ' cr'
+     }
+   },
+ 
+-- 
+2.10.0
+
+
+From dd5adec4058e23f5cbbc2ba736ce70bc14c0c672 Mon Sep 17 00:00:00 2001
+From: mariagwyn <mariagwyn@gmail.com>
+Date: Thu, 23 Feb 2017 12:46:07 -0800
+Subject: [PATCH 2/2] Issue 2854737 (sort of): cleanup file endings and quotes
+ to reduce warnings when runing gulp.
+
+---
+ STARTER/scss/STARTER.scss        | 28 ++++++++++++++--------------
+ STARTER/scss/base/_common.scss   |  2 +-
+ STARTER/scss/base/_drupal.scss   |  2 +-
+ STARTER/scss/base/_elements.scss |  2 +-
+ STARTER/scss/base/_mixins.scss   |  2 +-
+ STARTER/scss/layout/_header.scss |  2 +-
+ STARTER/scss/layout/_main.scss   |  2 +-
+ 7 files changed, 20 insertions(+), 20 deletions(-)
+
+diff --git a/STARTER/scss/STARTER.scss b/STARTER/scss/STARTER.scss
+index bb5471e..ca28bbc 100644
+--- a/STARTER/scss/STARTER.scss
++++ b/STARTER/scss/STARTER.scss
+@@ -26,7 +26,7 @@
+ // Make sure the charset is set appropriately
+ @charset 'utf-8';
+ 
+-//This is your _settings.scss file where you can override foundation variables. 
++//This is your _settings.scss file where you can override foundation variables.
+ @import 'settings';
+ 
+ // Core
+@@ -47,37 +47,37 @@ $flex: false;
+ 
+ // Import our mixins early so they can be used by other partials.
+ // Optional.
+-//@import "base/mixins";
++//@import 'base/mixins';
+ 
+ // Common file is where you place common utility classes to extend or
+ // parametrics.
+ // Optional.
+-// @import "base/common";
++// @import 'base/common';
+ 
+ // Drupal specific styles (to fix Drupalisms).
+-@import "base/drupal";
++@import 'base/drupal';
+ 
+ // Styling for elements.
+ // Optional.
+-// @import "base/elements";
++// @import 'base/elements';
+ 
+ // Layout
+ // Each section of the document has it's own partial seperated out to improve
+ // developer experience. Additionally, grids can be declared in layouts as well.
+-@import "layout/header";
+-@import "layout/main";
+-@import "layout/aside";
+-@import "layout/footer";
++@import 'layout/header';
++@import 'layout/main';
++@import 'layout/aside';
++@import 'layout/footer';
+ 
+ // Modules
+-// @import "modules/block";
+-// @import "modules/button";
++// @import 'modules/block';
++// @import 'modules/button';
+ 
+ // States
+-// @import "states/collapse";
++// @import 'states/collapse';
+ 
+ // Themes
+-// @import "theme/button-light";
++// @import 'theme/button-light';
+ 
+ // Older IE support
+-// @import "vendor/ie";
++// @import 'vendor/ie';
+diff --git a/STARTER/scss/base/_common.scss b/STARTER/scss/base/_common.scss
+index d3a70b7..e1336d2 100755
+--- a/STARTER/scss/base/_common.scss
++++ b/STARTER/scss/base/_common.scss
+@@ -4,4 +4,4 @@
+ // ------------------------------------------------------
+ // %font-FONTNAME   {}
+ // %font-sans-serif { font-family: sans-serif; }
+-// %font-serif      { font-family: serif; }
+\ No newline at end of file
++// %font-serif      { font-family: serif; }
+diff --git a/STARTER/scss/base/_drupal.scss b/STARTER/scss/base/_drupal.scss
+index 30230b2..9cc19e5 100755
+--- a/STARTER/scss/base/_drupal.scss
++++ b/STARTER/scss/base/_drupal.scss
+@@ -1 +1 @@
+-// Place any Drupal-related quirks here.
+\ No newline at end of file
++// Place any Drupal-related quirks here.
+diff --git a/STARTER/scss/base/_elements.scss b/STARTER/scss/base/_elements.scss
+index 4f2da00..751ca0f 100755
+--- a/STARTER/scss/base/_elements.scss
++++ b/STARTER/scss/base/_elements.scss
+@@ -55,4 +55,4 @@
+ 
+ // }
+ 
+-// select {}
+\ No newline at end of file
++// select {}
+diff --git a/STARTER/scss/base/_mixins.scss b/STARTER/scss/base/_mixins.scss
+index 0644810..ea8eabd 100755
+--- a/STARTER/scss/base/_mixins.scss
++++ b/STARTER/scss/base/_mixins.scss
+@@ -1,2 +1,2 @@
+ // @file
+-// Place your mixins here. Feel free to roll your own mixins.
+\ No newline at end of file
++// Place your mixins here. Feel free to roll your own mixins.
+diff --git a/STARTER/scss/layout/_header.scss b/STARTER/scss/layout/_header.scss
+index 97522e2..39bbb56 100755
+--- a/STARTER/scss/layout/_header.scss
++++ b/STARTER/scss/layout/_header.scss
+@@ -1 +1 @@
+-// Non-modular or client styles for .l-header region.
+\ No newline at end of file
++// Non-modular or client styles for .l-header region.
+diff --git a/STARTER/scss/layout/_main.scss b/STARTER/scss/layout/_main.scss
+index bdd9cd0..f216ab7 100755
+--- a/STARTER/scss/layout/_main.scss
++++ b/STARTER/scss/layout/_main.scss
+@@ -1 +1 @@
+-// Non-modular or client styles for the .l-content region.
+\ No newline at end of file
++// Non-modular or client styles for the .l-content region.
+-- 
+2.10.0
+

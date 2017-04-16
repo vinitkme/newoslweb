@@ -1,0 +1,109 @@
+@media only screen and (max-width: 48.000em) {
+	h1 {
+		font-size: 2em;
+	}
+
+	.front .parallax {
+		img {
+			display: none !important;
+		}
+	}
+
+	#banner {
+		padding-bottom: 106px;
+		overflow: visible;
+
+		.parallax {
+			background: url("../images/banner1.png") center no-repeat;
+			background-size: cover;
+		}
+	}
+
+	#flagship {
+		padding-bottom: 106px;
+
+		.parallax {
+			background: url("../images/33.png") center no-repeat;
+			background-size: cover;
+		}
+
+		&::before {
+			bottom: -100px;
+			height: 90px;
+		}
+
+		&::after {
+			height: 90px;
+		}
+	}
+
+	#client {
+		position: relative;
+		padding-top: 2em;
+	}
+
+	#banner-inner {
+		padding-bottom: 40px;
+		padding-top: 25px;
+		position: relative;
+
+		.banner-top {
+			position: relative;
+			margin-bottom: 44px;
+		}
+
+		&::before {
+			bottom: -80px;
+		}
+
+		img.menu-button {
+			width: 32px;
+		}
+	}
+
+	#move-drupal {
+		padding-top: 30px;
+	}
+
+	#in-touch {
+		padding-bottom: 106px;
+		padding-top: 130px;
+
+		.parallax {
+			background: url("../images/getintouch.jpg") center no-repeat;
+			background-size: cover;
+		}
+
+		&::before {
+			bottom: -100px;
+			height: 90px;
+		}
+
+		&::after {
+			height: 90px;
+		}
+	}
+}
+
+#flagship {
+	.flag-inner {
+		.column {
+			> div {
+				@media only screen and (min-width: 48.000em) {
+					background-size: 135px;
+				}
+				@media only screen and (min-width: 90.063em) {
+					background-size: auto;
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 40em) {
+	.Our_client-top {
+		margin: -50px 0 0;
+		z-index: 1;
+		position: relative;
+	}
+}
+@media only screen and (max-width: 21.250em) {}

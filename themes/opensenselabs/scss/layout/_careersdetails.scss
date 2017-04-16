@@ -1,0 +1,26 @@
+.post-details {
+ p { margin-left: 15px;
+ }
+}
+
+.form {
+  a {
+        margin-top: 25px;
+    @media only screen and (max-width: 40em) {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  }
+}
+.linkedin-apply {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.833rem;
+          height: 75px;
+              margin-top: 20px;
+          img {
+                margin-left: 16px;
+          }
+}
+.text-divider {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.833rem;
+}

@@ -1,0 +1,19 @@
+// Layout
+// Each section of the document has it's own partial seperated out to improve
+// developer experience. Additionally, grids can be declared in layouts as well.
+@import 'layout/variables';
+@import 'layout/header';
+@import 'layout/homepage';
+@import 'layout/blog';
+@import 'layout/services';
+@import 'layout/team';
+@import 'layout/nice-select';
+@import 'layout/servicesdetails ';
+@import 'layout/careers';
+@import 'layout/careersdetails';
+@import 'layout/migration';
+
+@import 'layout/small-screen';
+@import 'layout/main';
+@import 'layout/aside';
+@import 'layout/footer';
