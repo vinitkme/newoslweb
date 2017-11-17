@@ -754,7 +754,7 @@ $settings['file_scan_ignore_directories'] = [
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
 $databases['default']['default'] = array (
-  'database' => 'osl-new',
+  'database' => 'osl-new1',
   'username' => 'vinit',
   'password' => 'root',
   'prefix' => '',
@@ -763,5 +763,6 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
+$conf['preprocess_css'] = CACHE_DISABLED;
 $settings['install_profile'] = 'standard';
 $config_directories['sync'] = 'sites/default/files/config_nmJoFnfGZG3y9z6kgP_4QD4QCSr9O_q-fY6CEDWBhSJNqdcelb6kE6Q7dfZpwKRMNKKjcDXAQg/sync';

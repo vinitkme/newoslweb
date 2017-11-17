@@ -1,0 +1,6 @@
+
+.banner-top {
+  background-color: #1d84c3;
+  background-image: -webkit-linear-gradient(top, #055a8e 0%, #1d84c3 100%);
+  background-image: linear-gradient(to bottom, #055a8e 0%, #1d84c3 100%);
+}
