@@ -1,0 +1,6 @@
+name: Node Revisions
+type: module
+description: 'Displays list of node revisions'
+package: Vajra
+core: '8.x'
+

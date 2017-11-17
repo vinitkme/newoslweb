@@ -1,0 +1,12 @@
+name: "Popup Message"
+description: "Popup message for users"
+package: "User interface"
+type: module
+# core: 8.x
+configure: popup_message.settings
+
+# Information added by Drupal.org packaging script on 2017-02-17
+version: '8.x-1.0-beta1'
+core: '8.x'
+project: 'popup_message'
+datestamp: 1487356911

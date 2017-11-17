@@ -27,12 +27,11 @@
   {% if items %}
     {% if menu_level == 0 %}
       <ul class="off-canvas-list vertical menu">
+        <li class="menu-label"><a>Menu <button class="close-button" aria-label="Close menu" type="button" data-close="">
+  <span aria-hidden="true">×</span>
+</button></a></li>
     {% else %}
-      <ul{{ attributes }}>
-        <li class="back"><a href="#">{{ 'Back' | t }}</a></li>
-        {% if label is not empty %}
-          <li><label>{{ label }}</label></li>
-        {% endif %}
+      <ul class="menu right-submenu vertical nested">
     {% endif %}
     {% for item in items %}
       {% set item_classes = [ item.below is not empty ? 'has-submenu' ] %}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://opensenselabs.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://opensenselabs.com/about</loc><lastmod>2017-06-28T06:51Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://opensenselabs.com/blog/6-healthy-drupal-practices</loc><lastmod>2017-09-12T06:04Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/choosing-best-drupal-development-company</loc><lastmod>2017-06-28T08:05Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/drupal-for-educational-website</loc><lastmod>2017-06-28T09:24Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/drupal-higher-education</loc><lastmod>2017-06-28T07:30Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/drupal-vs-wordpress</loc><lastmod>2017-07-14T07:59Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/how-has-drupal-revamped-media-experience</loc><lastmod>2017-10-13T11:00Z</lastmod><changefreq>daily</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/drupalcon-vienna-day-1</loc><lastmod>2017-10-04T08:06Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/drupalcon-vienna-day-2</loc><lastmod>2017-10-04T08:08Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/drupalcon-vienna-day-3</loc><lastmod>2017-10-04T08:09Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/drupalcon-vienna-day-4</loc><lastmod>2017-10-04T08:09Z</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/node/50</loc><lastmod>2017-09-12T14:14Z</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/our-development-methodology</loc><lastmod>2017-06-28T08:48Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://opensenselabs.com/our-team</loc><lastmod>2017-07-25T10:55Z</lastmod><changefreq>yearly</changefreq></url>
+<url><loc>http://opensenselabs.com/services/development</loc><lastmod>2017-06-23T13:52Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-8-upgrade-migration</loc><lastmod>2017-06-28T08:09Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-commerce</loc><lastmod>2017-06-28T08:44Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-performance-tuning-optimisation</loc><lastmod>2017-06-28T08:46Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-personalization-cro</loc><lastmod>2017-06-28T07:23Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-staff-augmentation</loc><lastmod>2017-06-28T07:30Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-support-maintenance</loc><lastmod>2017-06-28T07:06Z</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/why-drupal-8</loc><lastmod>2017-06-20T07:13Z</lastmod><changefreq>yearly</changefreq></url>
+</urlset>

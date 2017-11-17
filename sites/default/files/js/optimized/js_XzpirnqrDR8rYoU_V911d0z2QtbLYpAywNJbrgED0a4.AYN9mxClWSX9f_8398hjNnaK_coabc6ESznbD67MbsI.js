@@ -1,0 +1,3 @@
+(function(s){'use strict';function i(s){return new RegExp('(^|\\s+)'+s+'(\\s+|$)')};var e,a,n;if('classList' in document.documentElement){e=function(s,e){return s.classList.contains(e)};a=function(s,e){s.classList.add(e)};n=function(s,e){s.classList.remove(e)}}
+else{e=function(s,e){return i(e).test(s.className)};a=function(s,n){if(!e(s,n)){s.className=s.className+' '+n}};n=function(s,e){s.className=s.className.replace(i(e),' ')}};function t(s,t){var i=e(s,t)?n:a;i(s,t)};var c={hasClass:e,addClass:a,removeClass:n,toggleClass:t,has:e,add:a,remove:n,toggle:t};if(typeof define==='function'&&define.amd){define(c)}
+else{s.classie=c}})(window);

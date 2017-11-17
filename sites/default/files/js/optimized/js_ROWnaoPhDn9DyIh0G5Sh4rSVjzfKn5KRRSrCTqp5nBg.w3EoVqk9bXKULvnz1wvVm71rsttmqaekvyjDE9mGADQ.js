@@ -1,0 +1,1 @@
+(function(t,i,e){'use strict';t.quickedit.EntityDecorationView=e.View.extend({initialize:function(){this.listenTo(this.model,'change',this.render)},render:function(){this.$el.toggleClass('quickedit-entity-active',this.model.get('isActive'))},remove:function(){this.setElement(null);e.View.prototype.remove.call(this)}})}(Drupal,jQuery,Backbone));

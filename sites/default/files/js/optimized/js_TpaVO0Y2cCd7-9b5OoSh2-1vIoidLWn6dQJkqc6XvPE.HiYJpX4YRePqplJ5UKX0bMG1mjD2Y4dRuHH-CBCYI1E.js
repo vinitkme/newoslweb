@@ -1,0 +1,1 @@
+(function(t,n){n.behaviors.foundationInit={attach:function(n,o){t(n).foundation()}}})(jQuery,Drupal);

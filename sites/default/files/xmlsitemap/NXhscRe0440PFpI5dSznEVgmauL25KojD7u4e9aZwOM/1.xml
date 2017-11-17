@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url><loc>http://opensenselabs.com/</loc><changefreq>daily</changefreq><priority>1.0</priority></url>
+<url><loc>http://opensenselabs.com/about</loc><lastmod>2017-06-23T10:26Z</lastmod><changefreq>hourly</changefreq></url>
+<url><loc>http://opensenselabs.com/blog/6-healthy-drupal-practices</loc><lastmod>2017-06-23T12:01Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/choosing-best-drupal-development-company</loc><lastmod>2017-06-23T12:00Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/drupal-for-educational-website</loc><lastmod>2017-06-23T11:57Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/blog/drupal-higher-education</loc><lastmod>2017-06-23T11:58Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/our-development-methodology</loc><lastmod>2017-06-21T06:37Z</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>http://opensenselabs.com/our-team</loc><lastmod>2017-06-21T06:27Z</lastmod><changefreq>weekly</changefreq></url>
+<url><loc>http://opensenselabs.com/services/development</loc><lastmod>2017-06-23T11:53Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-8-upgrade-migration</loc><lastmod>2017-06-23T11:59Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-commerce</loc><lastmod>2017-06-23T11:55Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-performance-tuning-optimisation</loc><lastmod>2017-06-23T11:54Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-personalization-cro</loc><lastmod>2017-06-23T12:00Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-staff-augmentation</loc><lastmod>2017-06-23T10:55Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/services/drupal-support-maintenance</loc><lastmod>2017-06-23T10:56Z</lastmod><changefreq>hourly</changefreq><priority>0.8</priority></url>
+<url><loc>http://opensenselabs.com/why-drupal-8</loc><lastmod>2017-06-20T07:13Z</lastmod><changefreq>weekly</changefreq></url>
+</urlset>

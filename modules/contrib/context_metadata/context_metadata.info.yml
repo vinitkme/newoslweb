@@ -1,0 +1,16 @@
+name: 'Context Metadata'
+description: 'Allows site admins to setup Meta Data using Contexts module'
+package: Context
+
+type: module
+# core: 8.x
+
+dependencies:
+  - context
+  - metatag
+
+# Information added by Drupal.org packaging script on 2017-06-09
+version: '8.x-1.0'
+core: '8.x'
+project: 'context_metadata'
+datestamp: 1497021245

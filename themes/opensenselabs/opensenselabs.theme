@@ -1,5 +1,70 @@
 <?php
 
+// // Convenience variables
+// if (isset($variables['page']['sidebar_first'])) {
+//   $left = $variables['page']['sidebar_first'];
+// }
+// if (isset($variables['page']['sidebar_second'])) {
+//   $right = $variables['page']['sidebar_second'];
+// }
+
+// // Dynamic sidebars
+// if (!empty($left) && !empty($right)) {
+//   $variables['main_grid'] = 'large-6';
+//   $variables['sidebar_first_grid'] = 'large-3';
+//   $variables['sidebar_sec_grid'] = 'large-3';
+// }
+// elseif (empty($left) && !empty($right)) {
+//   $variables['main_grid'] = 'large-9 medium-12';
+//   $variables['sidebar_first_grid'] = '';
+//   $variables['sidebar_sec_grid'] = 'large-3 medium-8';
+// }
+// elseif (!empty($left) && empty($right)) {
+//   $variables['main_grid'] = 'large-9 medium-12';
+//   $variables['sidebar_first_grid'] = 'large-3 medium-8';
+//   $variables['sidebar_sec_grid'] = '';
+// }
+// else {
+//   $variables['main_grid'] = 'large-12';
+//   $variables['sidebar_first_grid'] = '';
+//   $variables['sidebar_sec_grid'] = '';
+// }
+
+function opensenselabs_preprocess_page(&$variables){
+
+// Convenience variables
+
+  if (isset($variables['page']['sidebar_first'])) {
+    $left = $variables['page']['sidebar_first'];
+  }
+  if (isset($variables['page']['sidebar_second'])) {
+    $right = $variables['page']['sidebar_second'];
+  }
+
+  // Dynamic sidebars
+  if (!empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'large-6 large-push-3 medium-12';
+    $variables['sidebar_first_grid'] = 'large-3 large-pull-6 medium-12';
+    $variables['sidebar_sec_grid'] = 'large-3 medium-12';
+  }
+  elseif (empty($left) && !empty($right)) {
+    $variables['main_grid'] = 'large-9 medium-12';
+    $variables['sidebar_first_grid'] = '';
+    $variables['sidebar_sec_grid'] = 'large-3 medium-12';
+  }
+  elseif (!empty($left) && empty($right)) {
+    $variables['main_grid'] = 'large-9 large-push-3 medium-12';
+    $variables['sidebar_first_grid'] = 'large-3 large-pull-9 medium-12';
+    $variables['sidebar_sec_grid'] = '';
+  }
+  else {
+    $variables['main_grid'] = 'large-12';
+    $variables['sidebar_first_grid'] = '';
+    $variables['sidebar_sec_grid'] = '';
+  }
+
+
+}
 // Add your custom theme override functions here.
 
 /**
@@ -28,6 +93,20 @@ function opensenselabs_preprocess_html(&$variables) {
  * Add template suggestions and classes
  */
 function opensenselabs_preprocess_node(&$variables) {
+  $block = \Drupal\block\Entity\Block::load('addtoanybuttons');
+ $block_content = \Drupal::entityTypeManager()
+   ->getViewBuilder('block')
+   ->view($block);
+$variables['addtoany'] = $block_content;
+
+
+$block = \Drupal\block\Entity\Block::load('userinfoblock');
+ $block_content = \Drupal::entityTypeManager()
+   ->getViewBuilder('block')
+   ->view($block);
+$variables['userblock'] = $block_content;
+// $variables['userblock'] = entity_load('block', $userinfoblock)->getPlugin()->build(); 
+
 }
 
 /**
@@ -35,10 +114,9 @@ function opensenselabs_preprocess_node(&$variables) {
  *
  * Add convenience variables and template suggestions
  */
-function opensenselabs_preprocess_page(&$variables) {
-}
 
 /**
  * Implements template_preprocess_views_view().
  */
 function opensenselabs_preprocess_views_view(&$variables) {}
+

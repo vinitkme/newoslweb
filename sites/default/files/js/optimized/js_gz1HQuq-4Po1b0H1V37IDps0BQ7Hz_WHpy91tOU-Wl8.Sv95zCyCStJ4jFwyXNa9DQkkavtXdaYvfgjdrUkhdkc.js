@@ -1,0 +1,1 @@
+(function(i,t){'use strict';Drupal.behaviors.shareThis={attach:function(i){if(typeof stLight!=='undefined'){stLight.options(t.sharethis)}}}})(jQuery,drupalSettings);

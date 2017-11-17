@@ -1,0 +1,2 @@
+(function(i,a,n){'use strict';var e=n.path,s=sessionStorage.getItem('escapeAdminPath'),t=window.location;if(!e.currentPathIsAdmin&&!/destination=/.test(t.search)){sessionStorage.setItem('escapeAdminPath',t)};a.behaviors.escapeAdmin={attach:function(){var t=i('[data-toolbar-escape-admin]').once('escapeAdmin');if(t.length&&e.currentPathIsAdmin){if(s!==null){t.attr('href',s)}
+else{t.text(a.t('Home'))};t.closest('.toolbar-tab').removeClass('hidden')}}}})(jQuery,Drupal,drupalSettings);

@@ -70,47 +70,52 @@
 
                       <div class="banner-top">
 
-                          <a href="/"><img class="logo" src="http://osl:8888/themes/opensenselabs/images/logo.svg"></a>
+                          <a href="/"><img class="logo" src="/themes/opensenselabs/images/logo.png" alt="Opensense labs, Drupal Development company"></a>
 
-                          <a href="#" data-toggle="offCanvasRight1"><img class="menu-button" src="http://osl:8888/themes/opensenselabs/images/menu.png"></a>
+                          <a href="#" data-toggle="offCanvasRight1"><img class="menu-button" src="/themes/opensenselabs/images/menu.png" alt="Drupal services menu"></a>
                       </div>
-                      <div class="medium-12 column">
-                          <div class="inner_banner text-center">
-                              <span class="blog-tag"><h6>Drupal 8</h6></span>
-                              <h1 class="text-center">{{ node.label }}</h1>
-                              <div class="author-details">
-                                  <img src="images/author.png"/>
-                                  <h6 class="name">Vidhatanand Sharma</h6>
-                                  <h6 class="date">{{ node.author_picture.content }}</h6>
-                              </div>
 
-                          </div>
-                      </div>
                   </div>
               </div>
           </article>
-          <!-- <div class="parallax"><img src="{{ file_url(node.field_blog_banner.entity.fileuri) }}"/></div> -->
-          <div class="parallax"><img src="http://osl:8888/themes/opensenselabs/images/blogbanner.jpg"/></div>
+          <div class="parallax"><img src="{{ file_url(node.field_blog_banner.entity.fileuri) }}" alt="{{ node.field_blog_banner.alt }}"/></div>
+
       </section>
 
-      <div class="row row-custom">
+      <div class="row customrow">
+        {% if page.content_top %}
+        <section id="content-top" class="medium-12 columns">
+          {{ page.content_top }}
+        </section>
+        {% endif %}
+        {% if page.sidebar_first %}
+
+          <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar" data-sticky-container>
+
+<div class="sticky" data-sticky data-anchor="sidebar-second">
+
+{{ page.sidebar_first }}
+</div>
+          </div>
+        {% endif %}
         <main id="main" class="{{ main_grid }} columns" role="main">
-          {% if page.highlighted %}
-            {% spaceless %}
-              {{ page.highlighted }}
-            {% endspaceless %}
-          {% endif %}
+
+      
           <a id="main-content"></a>
           {% if breadcrumb %} {{ breadcrumb }} {% endif %}
           <section>
             {{ page.content }}
           </section>
-        </main>
-        {% if page.sidebar_first %}
-          <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar ">
-            {{ page.sidebar_first }}
+            {% if page.content_top %}
+          <section id="content-bottom" class="medium-12 columns">
+
+            <div class="row row-custom">
+            {{ page.page_bottom }}
           </div>
-        {% endif %}
+          </section>
+          {% endif %}
+        </main>
+
         {% if page.sidebar_second %}
           <div id="sidebar-second" class="{{ sidebar_sec_grid }} columns sidebar">
             {{ page.sidebar_second }}
@@ -118,21 +123,33 @@
         {% endif %}
       </div>
 
+      <div class="line text-center">
+                                        <img src="/themes/opensenselabs/images/line.png" alt="Line">
+                                    </div>
+      <section  id="page-contact" class="flex-row top-40 bottom-120">
+        <article>
+      <div class="row">
+          <div class="medium-12 column">
+              <div class="get_in text-center">
+                  <h2>Get in touch with our experts for<br>your development needs</h2>
+                  <br>
+                  <div class="contact-wrap">
+                  <button class="button custom mail-btn" type="button" data-toggle="contact">HELLO@OPENSENSELABS.COM</button>
+                  <div class="dropdown-pane" id="contact" data-dropdown>
+                      {{ page.page_contact }}
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </article>
 
-
+                          </section>
 
 
 {% include 'themes/opensenselabs/includes/footer.html.twig' %}
 
 
-
-      <div class="bottom-bar panel">
-        <div class="row">
-          <div class="large-12 columns">
-          &copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

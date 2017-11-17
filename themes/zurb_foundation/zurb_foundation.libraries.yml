@@ -2,7 +2,7 @@ global:
   version: VERSION
   css:
     base:
-      css/foundation-flex.min.css: {}
+      css/foundation.css: {}
       css/motion-ui.min.css: {}
       css/zurb_foundation.css: {}
   js:

@@ -1,0 +1,2 @@
+(function(t,i){'use strict';t.quickedit.BaseModel=i.Model.extend({initialize:function(t){this.__initialized=!0;return i.Model.prototype.initialize.call(this,t)},set:function(t,l,e){if(this.__initialized){if(typeof t==='object'){t.validate=!0}
+else{if(!e){e={}};e.validate=!0}};return i.Model.prototype.set.call(this,t,l,e)}})}(Drupal,Backbone));

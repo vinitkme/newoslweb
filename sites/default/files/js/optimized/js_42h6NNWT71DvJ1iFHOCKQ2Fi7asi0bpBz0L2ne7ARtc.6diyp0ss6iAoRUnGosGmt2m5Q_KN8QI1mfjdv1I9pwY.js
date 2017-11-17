@@ -1,0 +1,1 @@
+(function(o,t,s){'use strict';o.addEventListener('load',function(){if(s.history&&s.history.nodesToMarkAsRead){Object.keys(s.history.nodesToMarkAsRead).forEach(t.history.markAsRead)}})})(window,Drupal,drupalSettings);

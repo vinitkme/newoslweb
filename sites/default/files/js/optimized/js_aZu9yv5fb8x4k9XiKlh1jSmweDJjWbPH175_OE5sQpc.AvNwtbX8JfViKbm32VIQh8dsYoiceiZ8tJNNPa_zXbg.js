@@ -1,0 +1,1 @@
+(function(i,o){'use strict';o.AjaxCommands.prototype.editorDialogSave=function(t,o,e){i(window).trigger('editor:dialogsave',[o.values])}})(jQuery,Drupal);

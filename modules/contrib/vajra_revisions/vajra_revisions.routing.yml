@@ -1,0 +1,7 @@
+custom.node_revisions:
+  path: '/admin/nodes/revisions'
+  defaults:
+    _title: 'Revisions'
+    _controller: '\Drupal\vajra_revisions\Controller\RevisionsController::revisionOverview'
+  requirements:
+    _permission: 'access content'

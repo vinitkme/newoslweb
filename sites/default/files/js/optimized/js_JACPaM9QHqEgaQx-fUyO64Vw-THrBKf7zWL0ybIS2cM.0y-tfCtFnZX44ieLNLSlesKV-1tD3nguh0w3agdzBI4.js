@@ -1,0 +1,1 @@
+(function(a,r){'use strict';r.behaviors.detailsAria={attach:function(){a('body').once('detailsAria').on('click.detailsAria','summary',function(r){var t=a(r.currentTarget),e=a(r.currentTarget.parentNode).attr('open')==='open'?'false':'true';t.attr({'aria-expanded':e,'aria-pressed':e})})}}})(jQuery,Drupal);

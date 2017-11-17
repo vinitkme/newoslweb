@@ -1,0 +1,1 @@
+(function(t,e){'use strict';e.behaviors.commentFieldsetSummaries={attach:function(n){var i=t(n);i.find('fieldset.comment-entity-settings-form').drupalSetSummary(function(n){return e.checkPlain(t(n).find('.js-form-item-comment input:checked').next('label').text())})}}})(jQuery,Drupal);

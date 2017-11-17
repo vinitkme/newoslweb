@@ -1,0 +1,1 @@
+(function(e,l){'use strict';l.quickedit.AppModel=e.Model.extend({defaults:{highlightedField:null,activeField:null,activeModal:null}})}(Backbone,Drupal));

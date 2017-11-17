@@ -1,0 +1,7 @@
+name: Custom Revisions 2
+type: module
+description: 'Displays List of all node revisions'
+package: Custom
+core: '8.x'
+project: 'drupal'
+

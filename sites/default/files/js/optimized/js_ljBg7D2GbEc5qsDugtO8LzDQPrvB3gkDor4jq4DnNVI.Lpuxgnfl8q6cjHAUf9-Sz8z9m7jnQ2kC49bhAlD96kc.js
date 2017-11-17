@@ -1,0 +1,1 @@
+(function(t,e){'use strict';e.behaviors.ckeditorLanguageSettingsSummary={attach:function(){t('#edit-editor-settings-plugins-language').drupalSetSummary(function(e){return t('#edit-editor-settings-plugins-language-language-list-type option:selected').text()})}}})(jQuery,Drupal);

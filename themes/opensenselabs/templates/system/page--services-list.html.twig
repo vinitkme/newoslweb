@@ -69,13 +69,14 @@
 
                       <div class="banner-top">
 
-                          <a href="/"><img class="logo" src="http://osl:8888/themes/opensenselabs/images/logo.svg"></a>
+                          <a href="/"><img class="logo" src="/themes/opensenselabs/images/logo.svg"></a>
 
-                          <a href="#" data-toggle="offCanvasRight1"><img class="menu-button" src="http://osl:8888/themes/opensenselabs/images/menu.png"></a>
+                          <a href="#" data-toggle="offCanvasRight1"><img class="menu-button" src="/themes/opensenselabs/images/menu.png"></a>
                       </div>
                       <div class="medium-12 column">
                           <div class="inner_banner text-center">
                               <h1 class="text-center">{{ page.meta_header }}</h1>
+                              <p>History is important, but what we do today matters the most, and we realise that.</p>
 
 
                           </div>
@@ -109,7 +110,9 @@
             {{ page.sidebar_second }}
           </div>
         {% endif %}
+
       </div>
+
 
 
 
@@ -118,14 +121,6 @@
 {% include 'themes/opensenselabs/includes/footer.html.twig' %}
 
 
-
-      <div class="bottom-bar panel">
-        <div class="row">
-          <div class="large-12 columns">
-          &copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

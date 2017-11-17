@@ -1,0 +1,7 @@
+custom.node_revisions:
+  path: '/nodes/revisions'
+  defaults:
+    _title: 'Custom Revisions'
+    _controller: '\Drupal\revisions\Controller\RevisionsController::revisionOverview'
+  requirements:
+    _permission: 'access content'

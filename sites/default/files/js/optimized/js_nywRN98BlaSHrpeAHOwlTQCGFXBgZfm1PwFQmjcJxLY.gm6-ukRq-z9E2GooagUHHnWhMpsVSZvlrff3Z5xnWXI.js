@@ -1,0 +1,1 @@
+(function(a,t){t.behaviors.foundationTopBarActive={attach:function(t,i){var n=a(t).find('.top-bar .menu-item > a.is-active');if(n.length){n.once('foundationTopBarActive').each(function(){a(this).parent().addClass('active')})}}}})(jQuery,Drupal);

@@ -1,0 +1,59 @@
+<?php
+
+/**
+ * @file
+ * Contains context_metadata.module.
+ */
+
+ /**
+  * Alter the metatags for pages that are not of content entities.
+  *
+  * @param array $metatags
+  *   The special metatags to be added to the page.
+  * @param array $context
+  *   The context, containing the entity used for token replacements.
+  */
+function context_metadata_metatags_alter(array &$metatags, array $context) {
+
+  /** @var \Drupal\context\ContextManager $context_manager */
+  $context_manager = \Drupal::service('context.manager');
+
+  foreach ($context_manager->getActiveReactions('context_metadata') as $reaction) {
+    $context_metadata = array_filter($reaction->execute());
+
+    if (!empty($context_metadata)) {
+      foreach ($context_metadata as $key => $value) {
+
+        switch ($key) {
+          case 'metadata_title':
+            $metatags['title'] = $value;
+            break;
+
+          case 'metadata_description':
+            $metatags['description'] = $value;
+            break;
+
+          case 'metadata_keywords':
+            $metatags['keywords'] = $value;
+            break;
+
+          case 'metadata_canonical_url':
+            $metatags['canonical_url'] = $value;
+            break;
+
+          // TODO: Add this once we have other metadata working.
+          case 'metadata_h1_title':
+            $metatags['h1'] = $value;
+            break;
+
+          case 'metadata_robots':
+            $metatags['robots'] = $value;
+            break;
+        }
+
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,2 @@
+(function(t,e){'use strict';e.behaviors.viewTableFilterByText={attach:function(e,o){var i=t('input.views-filter-text').once('views-filter-text'),r=t(i.attr('data-table')),a;function n(e){var r=t(e.target).val().toLowerCase();function i(a,e){var i=t(e),n=i.find('[data-drupal-selector="views-table-filter-text-source"]'),o=n.text().toLowerCase().indexOf(r)!==-1;i.closest('tr').toggle(o)};if(r.length>=2){a.each(i)}
+else{a.show()}};if(r.length){a=r.find('tbody tr');i.on('keyup',n)}}}}(jQuery,Drupal));

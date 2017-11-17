@@ -1,0 +1,1 @@
+(function(t){t(document).ready(function(){t('a.toolbar-icon').removeAttr('title')})})(jQuery);

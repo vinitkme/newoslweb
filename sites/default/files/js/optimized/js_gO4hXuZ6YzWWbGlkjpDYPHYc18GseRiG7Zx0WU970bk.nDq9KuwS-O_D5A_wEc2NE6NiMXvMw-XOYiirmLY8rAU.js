@@ -1,0 +1,1 @@
+(function(e,t){'use strict';e.ckeditor.Model=t.Model.extend({defaults:{activeEditorConfig:null,$textarea:null,isDirty:!1,hiddenEditorConfig:null,buttonsToFeatures:null,featuresMetadata:null,groupNamesVisible:!1},sync:function(){this.get('$textarea').val(JSON.stringify(this.get('activeEditorConfig')))}})})(Drupal,Backbone);

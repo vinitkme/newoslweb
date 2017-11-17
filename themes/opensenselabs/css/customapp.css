@@ -7,10 +7,6 @@
   -ms-flex-flow: row wrap;
   flex-flow: row wrap; }
 
-@media screen and (max-width: 767px) {
-  .blog {
-    margin-bottom: 10px; } }
-
 .pager {
   text-align: center; }
   .pager .pager__item.pager__item--next {
@@ -115,10 +111,6 @@
           height: 0px;
           border: none; } }
 
-#sidebar-second .custom-form .input__field--akira {
-  position: absolute;
-  top: 40px;
-  left: 0; }
 @media screen and (min-device-width: 1024px) and (max-device-width: 768px) {
   #sidebar-second {
     padding: 0 6em; } }
@@ -258,20 +250,12 @@
 #sidebar-second section {
   padding-bottom: 20px; }
 #sidebar-second .custom-form .input__field--akira {
-  padding: 0 0.5em;
-  width: 281px;
-  height: 100%;
   border: 1px solid #e6e6e6 !important;
   height: 29px;
   font-size: 15px;
-  text-align: right;
-  box-shadow: none; }
-#sidebar-second .custom-form .input {
-  position: static;
-  margin: 0 0 0 0;
-  width: 100%;
-  font-family: montserrat;
-  font-size: 15px; }
+  box-shadow: none;
+  margin-bottom: 5px;
+  padding: 0 15px !important; }
 #sidebar-second .views-field.views-field-title {
   line-height: 1; }
 #sidebar-second #block-simplenewssubscription .block-title::after {
@@ -290,7 +274,11 @@
   #sidebar-second #block-simplenewssubscription #edit-mail-0-value--description {
     display: none !important; }
 #sidebar-second .button.js-form-submit.form-submit.input__field.input__field--akira {
-  display: none !important; }
+  width: auto !important;
+  height: 30px !important;
+  border-radius: 0 !important;
+  top: 3px;
+  position: relative; }
 
 #content-top {
   margin-bottom: 20px; }
@@ -310,23 +298,17 @@
   display: inline-block;
   position: relative;
   top: -37px;
-  left: 90px; }
+  left: 123px; }
 
 .flag.flag-likes_claps_on_blogs.action-flag {
   width: 39px;
   display: inline-block;
   position: relative;
   top: -37px;
-  left: 90px; }
+  left: 123px; }
 
 #sidebar-first {
-  padding-top: 2rem; }
-
-#sidebar-second {
-  padding-top: 2rem !important; }
-  @media screen and (max-width: 767px) {
-    #sidebar-second {
-      padding-top: 0; } }
+  padding-top: 4rem; }
 
 .action-flag .ro {
   background: url(../images/clap.svg) 0px 6px;
@@ -345,37 +327,6 @@
   background-size: cover; }
 
 .ajax-progress.ajax_progress-throbber {
-  display: none; }
-
-.interview-node-inner .action-unflag .ro {
-  background: none; }
-.interview-node-inner .action-flag .ro {
-  background: none; }
-.interview-node-inner .action-flag .ro:before {
-  ackground-repeat: no-repeat;
-  /* height: 44px; */
-  font-size: 21px;
-  font-family: 'FontAwesome';
-  top: -5px;
-  position: relative;
-  content: "\f087"; }
-.interview-node-inner .action-unflag .ro:before {
-  background-repeat: no-repeat;
-  /* height: 44px; */
-  font-size: 21px;
-  font-family: 'FontAwesome';
-  content: "\f164";
-  top: -5px;
-  position: relative;
-  color: #2ba6cb; }
-.interview-node-inner .flag.flag-likes_claps_on_blogs.action-flag {
-  top: 50px;
-  left: 63px; }
-.interview-node-inner .flag.flag-likes_claps_on_blogs.action-unflag {
-  top: 50px;
-  left: 63px; }
-
-.ajax-progress-throbber {
   display: none; }
 
 .posted .fa.fa-facebook {
@@ -515,24 +466,22 @@
   #block-userinfoblock .field-user--field-name {
     margin: 8px 0px 3px; }
 
-#sidebar-second {
-  padding: 0; }
-  #sidebar-second h2 {
-    font-size: 1rem;
-    color: #3494ba;
-    padding-bottom: 3px;
-    padding-top: 3px;
-    border-bottom: 4px solid #eeeff0;
-    border-top: 4px solid #eeeff0; }
-
-.featured-interview-wrap h3 {
+#sidebar-second h2 {
   font-size: 1rem;
-  text-align: center; }
-.featured-interview-wrap p {
-  font-size: 14px;
-  font-weight: 500;
-  color: #6d6e71;
-  margin: 0; }
+  color: #3494ba;
+  padding-bottom: 3px;
+  padding-top: 3px;
+  border-bottom: 4px solid #eeeff0;
+  border-top: 4px solid #eeeff0; }
+#sidebar-second .block-simplenewssubscription .form-item-message {
+  line-height: 5px; }
+  #sidebar-second .block-simplenewssubscription .form-item-message .input {
+    margin: 0;
+    font-size: 15px;
+    text-align: right; }
+#sidebar-second .block-simplenewssubscription .js-form-type-email .input {
+  margin: 12px 0 0 0;
+  width: 100%; }
 
 .top-80 {
   margin-top: 80px; }
@@ -677,5 +626,14 @@
   display: flex;
   align-items: center;
   padding: 0 15px; }
+
+.featured-interview-wrap h3 {
+  font-size: 1rem;
+  text-align: center; }
+.featured-interview-wrap p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6d6e71;
+  margin: 0; }
 
 /*# sourceMappingURL=customapp.css.map */

@@ -1,0 +1,52 @@
+//blog node styling
+.node--type-blog {
+  #main {
+    margin-top: -12em;
+    position: relative;
+    z-index: 1;
+    background: #fff;
+    padding: 0 30px !important;
+    .posted {
+      margin-top: -40px;
+      img {
+        border-radius: 50%;
+            margin-bottom: 25px;
+      }
+      h6 {
+        font-size: 0.667rem;
+        color: #0681ae;
+            margin: 0;
+      }
+    }
+    h1 {
+      font-size: 1.7rem;
+      color: #3a3a3c;
+      line-height: 1.1;
+      margin-top: 16px;
+    }
+  }
+  #banner-inner {
+     padding-bottom: 269px;
+  }
+}
+#block-userinfoblock {
+  background: #fafae2;
+padding: 15px;
+text-align: center;
+    border-radius: 5px;
+img {
+  width: 70px;
+height: 70px;
+border-radius: 50%;
+}
+.field-name-field-about- {
+  text-align: left;
+  .field-item {
+        font-size: 18px;
+            text-align: justify;
+  }
+}
+.field-user--field-name {
+      margin: 8px 0px 3px;
+}
+}

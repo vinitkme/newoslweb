@@ -77,26 +77,34 @@
     </h2>
   {% endif %}
   {{ title_suffix }}
-  {{ label }}
+
   {% if display_submitted %}
     <div class="posted">
       {{ author_picture }}
       <div{{ author_attributes }}>
-        {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+      <h6 class="name">By: {{ author_name }}</h6>
+      <h6 class="date">{% set createdDate = node.getCreatedTime|date('F j Y') %}
+{% trans %}{{ createdDate }} {% endtrans %}</h6>
+
         {{ metadata }}
       </div>
-    </div>
   {% endif %}
-
+  <h1>
+  {{ label }}
+</h1>
+  <div id="shareAdaptive"></div>
+  <div id="shareIcons"></div>
+  {{ addtoany }}
+</div>
   {# We hide the comments and links now so that we can render them later. #}
   <div{{ content_attributes }}>
-    {{ content|without('comment', 'links', 'field_tags', 'banner_banner') }}
+    {{ content|without('comment', 'links', 'field_tags', 'field_blog_banner', 'field_discuss', 'field_blog_image','field_is_it_a_good_read_' , 'field_blog_type' , 'field_tags' ) }}
   </div>
-
   {% if content.field_tags|length and not is_front %}
-    {{ content.field_tags }}
+  <div class="row row-custom">  {{ content.field_tags }} </div>
   {% endif %}
-
+  <div class="userblockstyle">  {{ userblock }} </div>
+  <div class="row row-custom top-40"> <div class="small-12"> {{ content.field_discuss }} </div></div>
   {{ content.links }}
   {{ content.comment }}
 </article>

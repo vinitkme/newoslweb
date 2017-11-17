@@ -1,0 +1,1 @@
+(function(u,l){'use strict';l.quickedit.EditorModel=u.Model.extend({defaults:{originalValue:null,currentValue:null,validationErrors:null}})}(Backbone,Drupal));

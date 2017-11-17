@@ -1,0 +1,1 @@
+(function(t,e){'use strict';e.toolbar.MenuModel=t.Model.extend({defaults:{subtrees:{}}})}(Backbone,Drupal));

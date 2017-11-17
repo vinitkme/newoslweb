@@ -70,9 +70,9 @@
 
                       <div class="banner-top">
 
-                          <a href="/"><img class="logo" src="http://osl:8888/themes/opensenselabs/images/logo.svg"></a>
+                          <a href="/"><img class="logo" src="/themes/opensenselabs/images/logo.png" alt="Opensense labs, Drupal Development company"></a>
 
-                          <a href="#" data-toggle="offCanvasRight1"><img class="menu-button" src="http://osl:8888/themes/opensenselabs/images/menu.png"></a>
+                          <a href="#" data-toggle="offCanvasRight1"><img class="menu-button" src="/themes/opensenselabs/images/menu.png" alt="Drupal services menu"></a>
                       </div>
                       <div class="medium-12 column">
                           <div class="inner_banner text-center">
@@ -85,10 +85,10 @@
                   </div>
               </div>
           </article>
-        <div class="parallax"><img src="http://osl:8888/themes/opensenselabs/images/services.jpg"/></div>
+        <div class="parallax"><img src="{{ file_url(node.field_blog_banner.entity.fileuri) }}" alt="{{ node.field_blog_banner.alt }}"/></div>
       </section>
 
-      <div class="row row-custom">
+      <div class="top-40">
         <main id="main" class="{{ main_grid }} columns" role="main">
           {% if page.highlighted %}
             {% spaceless %}
@@ -97,8 +97,21 @@
           {% endif %}
           <a id="main-content"></a>
           {% if breadcrumb %} {{ breadcrumb }} {% endif %}
-          <section>
+          <section class="service-content">
             {{ page.content }}
+
+            <div class="row row-custom small-up-1 medium-up-3 large-up-3 nxt-prev top-80 clearfix">
+                <div class="column"><a class="prev" href="/services">BACK TO ALL SERVICES</a></div>
+                <div class="column">
+                  <div class="contact-wrap">
+                  <button class="button custom mail-btn" type="button" data-toggle="contact">HELLO@OPENSENSELABS.COM</button>
+                  <div class="dropdown-pane" id="contact" data-dropdown>
+                      {{ page.page_contact }}
+                  </div>
+                </div>
+                </div>
+                </div>
+
           </section>
         </main>
         {% if page.sidebar_first %}
@@ -111,23 +124,35 @@
             {{ page.sidebar_second }}
           </div>
         {% endif %}
+
       </div>
 
 
 
+      <section class="se-slope-n  parallax-container slope-top flex-row slope-banner blog-banner top-40">
+                          <section class="se-slope-n">
+                              <article class="se-content-n">
+                                  <div class="row">
+                                      <div class="medium-12 column">
+                                          <div class="our_process text-center">
+                                            <h1>Our Development Process</h1>
+                                            <p>Get to know more about how we operate, what business &amp; development practices<br>
+                                                we follow and tools we use to deliver projects</p>
 
+                                            <a class="button orange" href="/our-development-methodology#">KNOW MORE</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </article>
+                            </section>
+                            <div class="parallax">
+                                <img src="/themes/opensenselabs/images/service.jpg" alt="Unsplashed background img 1">
+                            </div>
+                          </section>
 
 {% include 'themes/opensenselabs/includes/footer.html.twig' %}
 
 
-
-      <div class="bottom-bar panel">
-        <div class="row">
-          <div class="large-12 columns">
-          &copy; {{ "now"|date('Y') }} {{ site_name }} {{ 'All rights reserved.'|t }}
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </div>

@@ -89,7 +89,7 @@
 
   {# We hide the comments and links now so that we can render them later. #}
   <div{{ content_attributes }}>
-    {{ content|without('comment', 'links', 'field_tags') }}
+    {{ content|without('comment', 'links', 'field_service_icon', 'field_blog_banner') }}
   </div>
 
   {% if content.field_tags|length and not is_front %}

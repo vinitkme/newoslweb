@@ -8,4 +8,20 @@
     border-bottom: 4px solid #eeeff0;
     border-top: 4px solid #eeeff0;
   }
+  .block-simplenewssubscription {
+    .form-item-message {
+          line-height: 5px;
+      .input {
+        margin: 0;
+font-size: 15px;
+text-align: right;
+      }
+    }
+    .js-form-type-email {
+      .input {
+        margin: 12px 0 0 0;
+    width: 100%;
+      }
+    }
+  }
 }

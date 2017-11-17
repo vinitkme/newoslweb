@@ -1,0 +1,4 @@
+(function(e,t){'use strict';t.behaviors.filterStatus={attach:function(i,r){var a=e(i);a.find('#filters-status-wrapper input.form-checkbox').once('filter-status').each(function(){var r=e(this),c=a.find('#'+r.attr('id').replace(/-status$/,'-weight')).closest('tr'),s=a.find('#'+r.attr('id').replace(/-status$/,'-settings')),i=s.data('verticalTab');r.on('click.filterUpdate',function(){if(r.is(':checked')){c.show();if(i){i.tabShow().updateSummary()}
+else{s.show()}}
+else{c.hide();if(i){i.tabHide().updateSummary()}
+else{s.hide()}};t.tableDrag['filter-order'].restripeTable()});if(i){i.details.drupalSetSummary(function(e){return r.is(':checked')?t.t('Enabled'):t.t('Disabled')})};r.triggerHandler('click.filterUpdate')})}}})(jQuery,Drupal);

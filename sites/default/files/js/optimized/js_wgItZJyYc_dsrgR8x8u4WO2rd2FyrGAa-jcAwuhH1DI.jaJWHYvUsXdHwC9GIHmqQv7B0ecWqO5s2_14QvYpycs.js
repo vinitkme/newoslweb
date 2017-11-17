@@ -1,0 +1,1 @@
+(function(n,t){t.behaviors.foundationAlertClose={attach:function(t,o){n('.zurb-foundation-callout').once('foundation-alert').on('closed.zf',function(t){var a=n(t.target),o=a.parent();a.remove();o.html(o.html().replace(/\n/g,''))})}}})(jQuery,Drupal);

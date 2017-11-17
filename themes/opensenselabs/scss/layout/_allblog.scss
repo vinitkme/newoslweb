@@ -260,14 +260,13 @@ font-size: 18px !important;
 		{
 font-family: montserrat;
     font-weight: 700;
-
-    line-height: 0.6;
+    line-height: 1;
     padding-top: 0px;
     padding-bottom: 0px;
     display: inline-block;
     a {
     	font-size: 20px;
-    width: 270px;
+    display: block;
              @media screen and (max-width: $break-small) {
     font-size: 18px;
     /* width: 316px; */
@@ -372,22 +371,14 @@ section{
 
 
     .custom-form .input__field--akira {
-
-    padding: 0 0.5em;
-    width: 281px;
-    height: 100%;
-
-    border: 1px solid #e6e6e6 !important;
-    height: 29px;
-    font-size: 15px;
-    text-align: right;
-    box-shadow: none;
+      border: 1px solid #e6e6e6!important;
+      height: 29px;
+      font-size: 15px;
+      box-shadow: none;
+      margin-bottom: 5px;
+      padding: 0 15px !important;
 }
 
-.custom-form .input {
-    position: static;
-
-}
 .views-field.views-field-title{
 
         line-height: 1;}
@@ -424,7 +415,12 @@ section{
 
 
 .button.js-form-submit.form-submit.input__field.input__field--akira{
-    display: none !important;
+
+  width: auto !important;
+  height: 30px !important;
+  border-radius: 0 !important;
+  top: 3px;
+  position: relative;
 }
 }
 
@@ -512,4 +508,137 @@ background: url(../images/clap.svg) 0px -33px;
 
 .ajax-progress.ajax_progress-throbber{
     display: none;
+}
+.posted{
+    .fa.fa-facebook{
+        font-size: 22px;
+    border: 1px solid #3A549F;
+    padding: 3px 10px 4px 10px;
+    border-radius: 5px;
+    background: #3A549F;
+    color: white;
+    &:hover{
+        opacity: 0.7;
+}
+    }
+
+.fa.fa-twitter{
+    font-size: 24px;
+    border: 1px solid #3CADF6;
+    padding: 2px 4px 4px 5px;
+    border-radius: 5px;
+    background: #3CADF6;
+    color: white;
+     &:hover{
+        opacity: 0.7;
+}
+}
+}
+
+.section-all.views-page.path-all , .section-blogs.views-page , .section-tech-blog , .section-get-to-know{
+
+
+    #sidebar-second{
+        padding-top: 0em !important;
+          @media screen and (max-width: $break-small) {
+                padding-top: 0;
+        }
+}
+
+}
+
+
+.field.field-node--field-tags.field-name-field-tags{
+
+
+    pointer-events: none;
+    cursor: default;
+}
+.userblockstyle
+{
+        border-top: 1px solid #e0e0e0;
+    margin-top: 2em;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e0e0e0;
+
+ .field.field-user--user-picture{
+    display: inline-block;
+ }
+
+     #block-userinfoblock {
+     background: none;
+    padding: 15px;
+    text-align: unset !important;
+    border-radius: 5px;
+}
+
+#block-userinfoblock img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.field-user--field-name{
+        display: inline-block;
+        font-family: 'Montserrat',sans-serif;
+    font-size: 20px;
+    color: #085990;
+    line-height: 1.3;
+    font-weight: normal;
+   padding-left: 0.5rem;
+}
+.field.field-user--field-about-{
+font-size: .9em;
+    line-height: 28px;
+    margin-left: 68px;
+    margin-top: -11px;
+    font-family: 'Roboto Condensed',sans-serif;
+}
+}
+
+
+.ap-width {
+
+  top: 20px;
+  left: 20px;
+  width: 160px;
+  height: 9px;
+  background: #fff;
+  border-bottom: 1px solid #aaa;
+}
+
+.ap-width > div {
+
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: red;
+}
+
+.ap-text {
+
+  top: 50px;
+    left: 20px;
+    height: 20px;
+    width: 100px;
+    text-align: left;
+    padding: 2px;
+    line-height: 1;
+    font-size: 12px;
+    background: #fff;
+    border: 1px solid transparent;
+}
+
+
+.block-views-block-rediangtimeblog-block-1{
+    .views-label-body{
+        font-size: 13px;
+    }
+    .field-content{
+    display: inline-block;
+    font-size: 14px;
+    padding-left: 14px;
+    }
 }
