@@ -393,8 +393,7 @@
 .ap-width {
   top: 20px;
   left: 20px;
-  width: 160px;
-  height: 9px;
+  height: 5px;
   background: #fff;
   border-bottom: 1px solid #aaa; }
 
@@ -478,7 +477,8 @@
   #sidebar-second .block-simplenewssubscription .form-item-message .input {
     margin: 0;
     font-size: 15px;
-    text-align: right; }
+    text-align: right;
+    line-height: 1; }
 #sidebar-second .block-simplenewssubscription .js-form-type-email .input {
   margin: 12px 0 0 0;
   width: 100%; }

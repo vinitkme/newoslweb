@@ -108,6 +108,19 @@
 
 jQuery("#block-simplenewssubscription #edit-mail-0-value").attr("placeholder", "..type in your e-mail id");
 
+//custom sticky
+var wrap = $(".off-canvas-content");
+
+wrap.on("scroll", function(e) {
+
+  if (this.scrollTop > 147) {
+    wrap.addClass("fix-search");
+  } else {
+    wrap.removeClass("fix-search");
+  }
+
+});
+
     }
   };
 

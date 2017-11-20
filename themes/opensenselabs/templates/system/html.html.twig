@@ -52,7 +52,7 @@ _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
 $.src="https://v2.zopim.com/?4naEx29rUGwTN2n66mQ63thHUmlnpQ7l";z.t=+new Date;$.
 type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
 </script>
-<!--End of Zendesk Chat Script--> 
+<!--End of Zendesk Chat Script-->
   </head>
   <body{{ attributes.addClass(body_classes) }}>
   <a href="#main-content" class="visually-hidden focusable skip-link">
@@ -62,5 +62,8 @@ type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
   {{ page }}
   {{ page_bottom }}
   <js-bottom-placeholder token="{{ placeholder_token|raw }}">
+    <script type="text/javascript">
+    $(document).foundation();
+    </script>
   </body>
 </html>
