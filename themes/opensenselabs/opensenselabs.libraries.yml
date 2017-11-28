@@ -7,8 +7,11 @@ global:
       css/app.css: {}
       css/customapp.css: {}
   js:
+    js/jquery.article-progress.js: {}
     js/classie.js: {}
     js/STARTER.js: {}
+    js/stickkit.js: {}
+
 
 fontawesome:
   version: 4.7.0

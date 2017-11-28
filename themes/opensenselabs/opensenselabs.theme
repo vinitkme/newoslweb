@@ -43,8 +43,8 @@ function opensenselabs_preprocess_page(&$variables){
 
   // Dynamic sidebars
   if (!empty($left) && !empty($right)) {
-    $variables['main_grid'] = 'large-6 large-push-3 medium-12';
-    $variables['sidebar_first_grid'] = 'large-3 large-pull-6 medium-12';
+    $variables['main_grid'] = 'large-7 large-push-3 medium-12';
+    $variables['sidebar_first_grid'] = 'large-2 large-pull-6 medium-12';
     $variables['sidebar_sec_grid'] = 'large-3 medium-12';
   }
   elseif (empty($left) && !empty($right)) {

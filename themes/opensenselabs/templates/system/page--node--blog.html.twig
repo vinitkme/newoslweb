@@ -90,17 +90,22 @@
         {% endif %}
         {% if page.sidebar_first %}
 
-          <div id="sidebar-first" class="large-1 medium-12 columns sidebar" data-sticky-container>
+          <div id="sidebar-first" class="{{ sidebar_first_grid }} columns sidebar " data-sticky-container="">
+<div  id ="sticky-scroll-box">
+{# <div class="sticky" data-btm-anchor="main:bottom" data-sticky="" data-top-anchor="sidebar-first:top"> #}
 
-<div class="sticky" data-sticky data-anchor="sidebar-second">
-
+        
 {{ page.sidebar_first }}
+{# </div> #}
 </div>
           </div>
         {% endif %}
-        <main id="main" class="large-8 medium-12 columns" role="main">
-
-
+        <main id="main" class="{{ main_grid }} columns" role="main">
+          {% if page.highlighted %}
+            {% spaceless %}
+              {{ page.highlighted }}
+            {% endspaceless %}
+          {% endif %}
           <a id="main-content"></a>
           {% if breadcrumb %} {{ breadcrumb }} {% endif %}
           <section>

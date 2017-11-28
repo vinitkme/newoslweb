@@ -11,6 +11,26 @@
   Drupal.behaviors.exampleBehavior = {
     attach: function (context, settings) {
 
+ if (jQuery(".node--type-services .body.field.field-node--body p").hasClass("row row-custom")) {
+ jQuery( " .top-40  ul " ).removeClass( " row row-custom" );
+  jQuery( " .top-40  p " ).removeClass( " row row-custom" );
+}
+jQuery("#sticky-scroll-box").stick_in_parent();
+
+
+jQuery("#block-simplenewssubscription #edit-mail-0-value").attr("placeholder", "..type in your e-mail id");
+
+
+jQuery('.body.field.field-node--body').articleProgress({
+  target: '.ap-width>div'
+});
+jQuery('.body.field.field-node--body').articleProgress({
+  target: '.ap-text',
+  mode: 'text'
+});
+
+
+
 
   $.fn.parallax = function () {
     var window_width = $(window).width();
@@ -106,22 +126,22 @@
     }
   })();
 
-jQuery("#block-simplenewssubscription #edit-mail-0-value").attr("placeholder", "..type in your e-mail id");
+// jQuery("#block-simplenewssubscription #edit-mail-0-value").attr("placeholder", "..type in your e-mail id");
 
-//custom sticky
-var wrap = $(".off-canvas-content");
 
-wrap.on("scroll", function(e) {
+// jQuery('.body.field.field-node--body').articleProgress({
+//   target: '.ap-width>div'
+// });
+// jQuery('.body.field.field-node--body').articleProgress({
+//   target: '.ap-text',
+//   mode: 'text'
+// });
 
-  if (this.scrollTop > 147) {
-    wrap.addClass("fix-search");
-  } else {
-    wrap.removeClass("fix-search");
-  }
 
-});
 
     }
   };
+
+
 
 })(jQuery, Drupal);

@@ -276,7 +276,6 @@
 #sidebar-second .button.js-form-submit.form-submit.input__field.input__field--akira {
   width: auto !important;
   height: 30px !important;
-  border-radius: 0 !important;
   top: 3px;
   position: relative; }
 
@@ -422,6 +421,50 @@
   display: inline-block;
   font-size: 14px;
   padding-left: 14px; }
+
+#sidebar-second .button.js-form-submit.form-submit.input__field.input__field--akira {
+  margin-top: 16px; }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 99; }
+
+#sticky-scroll-box {
+  width: 90px;
+  padding-top: 1em; }
+
+.body .team.text-center a.button {
+  position: relative;
+  padding: 0 2rem;
+  line-height: 1.6;
+  color: white;
+  text-decoration: none;
+  -webkit-transition: background .5s ease 0s;
+  transition: background .5s ease 0s;
+  margin: 0 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Montserrat',sans-serif; }
+
+.region-highlighted.panel.callout .zurb-foundation-callout.callout.alert {
+  display: none; }
+
+.node--type-page .addtoany_list {
+  display: none; }
+
+.box-border {
+  background-color: #f7f7f7;
+  padding: 15px !important;
+  margin-top: 20px; }
+
+.field-node--body a {
+  color: #dd3f1b; }
+
+.off-canvas {
+  background-color: #f4f4f4;
+  padding-left: 20px;
+  overflow: hidden; }
 
 .node--type-blog #main {
   margin-top: -12em;
@@ -617,23 +660,5 @@
 .author-details h6 {
   font-weight: 700;
   font-size: 0.500rem; }
-
-.secondary-share-block {
-  background-color: #ececec;
-  border-bottom: 1px solid #e0e0e0;
-  border-top: 1px solid #f7f7f9;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  padding: 0 15px; }
-
-.featured-interview-wrap h3 {
-  font-size: 1rem;
-  text-align: center; }
-.featured-interview-wrap p {
-  font-size: 14px;
-  font-weight: 500;
-  color: #6d6e71;
-  margin: 0; }
 
 /*# sourceMappingURL=customapp.css.map */
